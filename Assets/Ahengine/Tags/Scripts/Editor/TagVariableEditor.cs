@@ -54,7 +54,7 @@ namespace TagSystem
             index = EditorGUI.Popup(contentPosition,
                    tagsSettings.GetIndex(TagProp.stringValue), tagsSettings.Tags);
 
-            if (index == tagsSettings.GetIndex(TagProp.stringValue)) return;
+            if (index == tagsSettings.GetIndex(TagProp.stringValue) && TagProp.stringValue != null) return;
 
             TagProp.stringValue = tagsSettings.Tags[index];
 

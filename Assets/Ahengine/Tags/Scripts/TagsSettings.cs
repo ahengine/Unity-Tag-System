@@ -12,7 +12,7 @@ namespace TagSystem
                 if (Tags[i] == tag)
                     return i;
 
-            return 0;
+            return -1;
         }
     }
 }

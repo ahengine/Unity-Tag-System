@@ -13,8 +13,8 @@ namespace TagSystem
             var owner = target as Tagger;
             if (!owner.TagSettings || owner.TagSettings.Tags.Length == 0) return;
             index = EditorGUILayout.Popup("Tag",index, owner.TagSettings.Tags);
-            if (index == owner.TagSettings.GetIndex(owner.Tag)) return;
-            owner.Tag = owner.TagSettings.Tags[index];
+            if (index == owner.TagSettings.GetIndex(owner.Tag) && owner.Tag != null) return;
+            owner.SetTag(owner.TagSettings.Tags[index]);
             EditorUtility.SetDirty(target);
         }
     }
