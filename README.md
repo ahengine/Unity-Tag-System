@@ -1,2 +1,2 @@
-# Unity-Tag-System
- A simple tag system in unity
+# UTag
+ This is a simple Tag System
